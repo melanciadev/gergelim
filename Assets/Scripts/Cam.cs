@@ -10,6 +10,9 @@ namespace Melancia.Gergelim {
 		public Renderer multiply { get; private set; }
 		public Renderer screen { get; private set; }
 
+		public bool positionUpdate { get; private set; }
+		Vector2 lastFixedPosition;
+
 		public static Color multiplyColour = Color.blue;
 		public static Color screenColour = Color.yellow;
 
@@ -25,18 +28,25 @@ namespace Melancia.Gergelim {
 		void Start() {
 			if (Fox.me != null) {
 				expectedPos = Fox.me.tr.position;
+				lastFixedPosition = expectedPos;
 				Move(expectedPos.x,expectedPos.y);
 			}
 		}
 		
-		void LateUpdate() {
+		void Update() {
+			positionUpdate = false;
 			if (Fox.me != null) expectedPos = Fox.me.tr.position;
 			Move(expectedPos.x,expectedPos.y,Time.deltaTime*4);
 		}
 
 		void Move(float x,float y,float t = 1) {
 			var pos = tr.position;
-			tr.position = new Vector3(Mathf.Lerp(pos.x,x,t),Mathf.Lerp(pos.y,y+.5f,t),pos.z);
+			var newPos = new Vector3(Mathf.Lerp(pos.x,x,t),Mathf.Lerp(pos.y,y+.5f,t),pos.z);
+			tr.position = newPos;
+			if ((lastFixedPosition-(Vector2)newPos).sqrMagnitude >= .01f) {
+				lastFixedPosition = newPos;
+				positionUpdate = true;
+			}
 		}
 
 		public static void Multiply(float a = 0) {

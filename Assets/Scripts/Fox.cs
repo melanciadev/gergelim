@@ -31,6 +31,8 @@ namespace Melancia.Gergelim {
 		static int frontMask = -1;
 		static int backMask = -1;
 
+		AudioClip clip;
+
 		void Awake() {
 			me = this;
 			tr = transform;
@@ -45,6 +47,7 @@ namespace Melancia.Gergelim {
 				backMask = LayerMask.NameToLayer("Back");
 			}
 			col.gameObject.layer = frontMask;
+			clip = Resources.Load<AudioClip>("p");
 		}
 
 		void Update() {
@@ -106,6 +109,7 @@ namespace Melancia.Gergelim {
 					}
 				}
 			}
+			if (Input.GetButtonDown("alt")) tr.PlaySound(clip,1,1);
 		}
 		
 		void SwitchDepth() {
