@@ -7,6 +7,8 @@ namespace Melancia.Gergelim {
 		public Transform tr { get; private set; }
 		public Rigidbody2D rb { get; private set; }
 		public Collider2D col { get; private set; }
+		public Transform spriteTr { get; private set; }
+		public Animator sprite { get; private set; }
 
 		public static Fox me { get; private set; }
 
@@ -38,6 +40,8 @@ namespace Melancia.Gergelim {
 			tr = transform;
 			rb = GetComponent<Rigidbody2D>();
 			col = tr.Find("collider").GetComponent<Collider2D>();
+			spriteTr = tr.Find("sprite");
+			sprite = spriteTr.GetComponent<Animator>();
 			cols = new Dictionary<Collider2D,Collision2D>();
 		}
 		
@@ -89,7 +93,15 @@ namespace Melancia.Gergelim {
 				tr.position = new Vector3(tr.position.x,tr.position.y,Utils.Ease(zPosition));
 			} else {
 				float x = Input.GetAxisRaw("x");
-				if (Mathf.Abs(x) >= .25f) tr.position += new Vector3(x*velocity*Time.deltaTime,0,0);
+				if (Mathf.Abs(x) >= .25f) {
+					tr.position += new Vector3(x*velocity*Time.deltaTime,0,0);
+					if (Mathf.Sign(spriteTr.localScale.x) != Mathf.Sign(x)) {
+						spriteTr.localScale = new Vector3(-spriteTr.localScale.x,spriteTr.localScale.y,spriteTr.localScale.z);
+					}
+					sprite.SetBool("Running",true);
+				} else {
+					sprite.SetBool("Running",false);
+				}
 				if (jumpTimeout > 0) {
 					jumpTimeout -= Time.deltaTime;
 					if (jumpTimeout < 0) jumpTimeout = 0;
@@ -97,7 +109,19 @@ namespace Melancia.Gergelim {
 				if (grounded && Mathf.Approximately(0,jumpTimeout) && Input.GetButton("jump")) {
 					rb.AddForce(Vector2.up*jump,ForceMode2D.Impulse);
 					jumpTimeout = .5f;
+					grounded = false;
+					sprite.SetTrigger("Jump");
 				}
+				if (grounded && Mathf.Approximately(0, jumpTimeout) && sprite.GetBool("Flying")) {
+					sprite.SetTrigger("Falling");
+					sprite.SetBool("Flying",false);
+				}
+
+				if (!grounded && !sprite.GetBool("Flying")) {
+					sprite.SetBool("Flying",true);
+				}
+
+
 				if (Input.GetButtonDown("action")) {
 					AreaInfo info;
 					if (Area.GetArea(tr.position,out info)) {
