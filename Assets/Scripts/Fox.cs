@@ -115,6 +115,7 @@ namespace Melancia.Gergelim {
 		void SwitchDepth() {
 			zTransitioning = true;
 			zBack = !zBack;
+			Sound.SetLowpass(zBack);
 			SetRigidbody(false);
 		}
 		

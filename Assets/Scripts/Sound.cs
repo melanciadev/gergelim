@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Melancia.Gergelim {
 	public class Sound:MonoBehaviour {
 		public static Sound me { get; private set; }
+
+		public AudioMixerGroup master;
+		AudioMixerSnapshot lowpass0,lowpass1;
 
 		Transform tr;
 		AudioSource[] aud;
@@ -21,8 +25,11 @@ namespace Melancia.Gergelim {
 				var s = aud[a] = gameObject.AddComponent<AudioSource>();
 				s.loop = false;
 				s.playOnAwake = false;
+				s.outputAudioMixerGroup = master;
 			}
 			audIndex = 0;
+			lowpass0 = master.audioMixer.FindSnapshot("0");
+			lowpass1 = master.audioMixer.FindSnapshot("1");
 		}
 
 		public static void Play(AudioClip clip,float volume = 1,float pitch = 1) {
@@ -52,6 +59,11 @@ namespace Melancia.Gergelim {
 			aud[audIndex].Play();
 			audIndex++;
 			if (audIndex >= poolSize) audIndex = 0;
+		}
+
+		public static void SetLowpass(bool enable) {
+			if (me == null) return;
+			(enable ? me.lowpass1 : me.lowpass0).TransitionTo(.5f);
 		}
 	}
 
