@@ -51,26 +51,30 @@ namespace Melancia.Gergelim {
 
 		public static void Multiply(float a = 0) {
 			if (me == null) return;
+			a = Mathf.Clamp01(a);
 			if (Mathf.Approximately(a,0)) {
 				me.multiply.enabled = false;
 			} else {
+				me.multiply.enabled = true;
 				me.multiply.material.color = new Color(
-					multiplyColour.r*a,
-					multiplyColour.g*a,
-					multiplyColour.b*a,
+					1-(1-multiplyColour.r)*a,
+					1-(1-multiplyColour.g)*a,
+					1-(1-multiplyColour.b)*a,
 				1);
 			}
 		}
 
 		public static void Screen(float a = 0) {
 			if (me == null) return;
+			a = Mathf.Clamp01(a);
 			if (Mathf.Approximately(a,0)) {
 				me.screen.enabled = false;
 			} else {
+				me.screen.enabled = true;
 				me.screen.material.color = new Color(
-					1-(1-screenColour.r)*a,
-					1-(1-screenColour.g)*a,
-					1-(1-screenColour.b)*a,
+					screenColour.r*a,
+					screenColour.g*a,
+					screenColour.b*a,
 				1);
 			}
 		}
