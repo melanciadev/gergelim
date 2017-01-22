@@ -57,15 +57,16 @@ namespace Melancia.Gergelim {
 				if (Cam.me.positionUpdate) UpdateExpectedVolume();
 				tr.position = Cam.me.tr.position;
 			}
-			if (aud.volume > expectedVolume) {
+			float ex = expectedVolume*finalVolume;
+			if (aud.volume > ex) {
 				aud.volume -= Time.deltaTime*stepVelocity;
-				if (aud.volume <= expectedVolume) {
-					aud.volume = expectedVolume;
+				if (aud.volume <= ex) {
+					aud.volume = ex;
 					if (autoPause && Mathf.Approximately(0,aud.volume) && aud.isPlaying) aud.Pause();
 				}
-			} else if (aud.volume < expectedVolume) {
+			} else if (aud.volume < ex) {
 				aud.volume += Time.deltaTime*stepVelocity;
-				if (aud.volume > expectedVolume) aud.volume = expectedVolume;
+				if (aud.volume > ex) aud.volume = ex;
 				if (autoPause && !aud.isPlaying) aud.UnPause();
 			}
 		}
