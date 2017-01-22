@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r10">
+    <folder id="0">
+        <file id="0" name="arbusto_do_piru.png" width="411" height="273" pivot_x="0.5" pivot_y="0.5"/>
+        <file id="1" name="piru.png" width="125" height="230" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <entity id="0" name="piru">
+        <animation id="0" name="idle" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="arbusto_do_piru">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-2" y="58"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="oi" length="500" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="1" time="145">
+                    <object_ref id="0" timeline="1" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="2" time="223">
+                    <object_ref id="0" timeline="1" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="3" time="316">
+                    <object_ref id="0" timeline="1" key="3" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="4" time="349">
+                    <object_ref id="0" timeline="1" key="4" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="arbusto_do_piru">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-2" y="58"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="piru">
+                <key id="0">
+                    <object folder="0" file="1" x="-22" y="47" scale_x="0.873016" scale_y="0.873016"/>
+                </key>
+                <key id="1" time="145">
+                    <object folder="0" file="1" x="-16" y="203" angle="3.012788" scale_x="0.873016" scale_y="0.873016"/>
+                </key>
+                <key id="2" time="223">
+                    <object folder="0" file="1" x="-19.015201" y="204.910144" angle="4.521167" scale_x="0.873016" scale_y="0.873016"/>
+                </key>
+                <key id="3" time="316" spin="-1">
+                    <object folder="0" file="1" x="-6.076667" y="185.503333" angle="7.219264" scale_x="0.873016" scale_y="0.873016"/>
+                </key>
+                <key id="4" time="349" spin="-1">
+                    <object folder="0" file="1" x="-20.212156" y="218.391431" angle="4.540803" scale_x="0.873016" scale_y="0.873016"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

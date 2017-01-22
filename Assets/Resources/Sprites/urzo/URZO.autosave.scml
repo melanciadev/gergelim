@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r10">
+    <folder id="0">
+        <file id="0" name="coisas.png" width="1544" height="770" pivot_x="0.5" pivot_y="0.5"/>
+        <file id="1" name="corpo.png" width="1352" height="826" pivot_x="0.5" pivot_y="0.145194"/>
+        <file id="2" name="oreiaDIR.png" width="90" height="94" pivot_x="0.633333" pivot_y="0.361702"/>
+        <file id="3" name="oreiaESQ.png" width="98" height="96" pivot_x="0.704082" pivot_y="0.572917"/>
+        <file id="4" name="grama.png" width="1518" height="223" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <entity id="0" name="urzo">
+        <animation id="0" name="idle" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="1" time="241">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="2" time="395">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="3" time="450">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="4" time="508">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="5" time="662">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="6" time="831">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+                <key id="7" time="976">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="3" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="coisas">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-16" y="93" angle="1.539126"/>
+                </key>
+                <key id="1" time="395" spin="0">
+                    <object folder="0" file="0" x="-16" y="93" angle="1.539126" scale_x="1" scale_y="0.984331"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="corpo">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="73.913043" y="-189.130435" angle="1.959355" scale_y="1"/>
+                </key>
+                <key id="1" time="450" spin="0">
+                    <object folder="0" file="1" x="73.913043" y="-189.130435" angle="1.959355" scale_x="1" scale_y="1.032108"/>
+                </key>
+                <key id="2" time="508" spin="0">
+                    <object folder="0" file="1" x="73.913043" y="-189.130435" angle="1.959355" scale_x="1" scale_y="1.032623"/>
+                </key>
+                <key id="3" time="976" spin="0">
+                    <object folder="0" file="1" x="73.913043" y="-189.130435" angle="1.959355" scale_y="0.994529"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="oreiaDIR">
+                <key id="0" spin="-1">
+                    <object folder="0" file="2" x="-721.73913" y="-67.391304"/>
+                </key>
+                <key id="1" time="241">
+                    <object folder="0" file="2" x="-721.73913" y="-67.391304" angle="346.698385" scale_y="1"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="oreiaESQ">
+                <key id="0">
+                    <object folder="0" file="3" x="-715.217391" y="-193.478261"/>
+                </key>
+                <key id="1" time="662" spin="-1">
+                    <object folder="0" file="3" x="-715.217391" y="-193.478261" angle="2.758735" scale_y="1"/>
+                </key>
+                <key id="2" time="831">
+                    <object folder="0" file="3" x="-715.217391" y="-193.478261" angle="356.730493" scale_x="1" scale_y="1"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="grama">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="-13.043478" y="-206.521739"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

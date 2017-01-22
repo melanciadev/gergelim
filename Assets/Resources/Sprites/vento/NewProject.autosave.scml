@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r10">
+    <folder id="0">
+        <file id="0" name="folha1.png" width="132" height="130" pivot_x="0.575758" pivot_y="0.546154"/>
+        <file id="1" name="folha2.png" width="162" height="130" pivot_x="0.666667" pivot_y="0.561538"/>
+        <file id="2" name="folha3.png" width="94" height="102" pivot_x="0.478723" pivot_y="0.676471"/>
+    </folder>
+    <entity id="0" name="folhas_caindo">
+        <animation id="0" name="folha1" length="1000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="332" curve_type="cubic" c1="0.995305" c2="0.9953">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+                <key id="2" time="545" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                </key>
+                <key id="3" time="799" curve_type="cubic" c1="0.995305" c2="0.995305">
+                    <object_ref id="0" timeline="0" key="3" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="folha1">
+                <key id="0" spin="-1">
+                    <object folder="0" file="0" x="95" y="43" angle="213.407825" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="1" time="332" spin="-1">
+                    <object folder="0" file="0" x="-42" y="47" angle="147.724356" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="2" time="545">
+                    <object folder="0" file="0" x="-87.78786" y="41.446183" angle="137.308058" scale_x="1"/>
+                </key>
+                <key id="3" time="799">
+                    <object folder="0" file="0" x="32.392889" y="43.889593" angle="178.417566" scale_x="1"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="folha2" length="1000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="332" curve_type="cubic" c1="0.995305" c2="0.9953">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+                <key id="2" time="545" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                </key>
+                <key id="3" time="799" curve_type="cubic" c1="0.995305" c2="0.995305">
+                    <object_ref id="0" timeline="0" key="3" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="folha1">
+                <key id="0" spin="-1">
+                    <object folder="0" file="1" x="95" y="43" angle="213.407825" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="1" time="332" spin="-1">
+                    <object folder="0" file="1" x="-42" y="47" angle="171.135377" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="2" time="545">
+                    <object folder="0" file="1" x="-121.78786" y="48.446183" angle="164.31827" scale_x="1"/>
+                </key>
+                <key id="3" time="799">
+                    <object folder="0" file="1" x="32.392889" y="43.889593" angle="183.66227" scale_x="1"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="2" name="folha3" length="1000" interval="100">
+            <mainline>
+                <key id="0" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="332" curve_type="cubic" c1="0.995305" c2="0.9953">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+                <key id="2" time="544" curve_type="cubic" c1="0" c2="0">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                </key>
+                <key id="3" time="799" curve_type="cubic" c1="0.995305" c2="0.995305">
+                    <object_ref id="0" timeline="0" key="3" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="folha1">
+                <key id="0" spin="-1">
+                    <object folder="0" file="2" x="99" y="43" angle="150.164461" scale_x="1"/>
+                </key>
+                <key id="1" time="332" spin="-1">
+                    <object folder="0" file="2" x="-42" y="47" angle="76.607502" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="2" time="544">
+                    <object folder="0" file="2" x="-121.78786" y="48.446183" angle="44.872703" scale_x="1" scale_y="1"/>
+                </key>
+                <key id="3" time="799">
+                    <object folder="0" file="2" x="32.392889" y="43.889593" angle="111.939592" scale_x="1"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
