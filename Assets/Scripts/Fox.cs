@@ -98,7 +98,8 @@ namespace Melancia.Gergelim {
 					if (Mathf.Sign(spriteTr.localScale.x) != Mathf.Sign(x)) {
 						spriteTr.localScale = new Vector3(-spriteTr.localScale.x,spriteTr.localScale.y,spriteTr.localScale.z);
 					}
-					sprite.SetBool("Running",true);
+					if(!sprite.GetBool("Flying"))
+						sprite.SetBool("Running",true);
 				} else {
 					sprite.SetBool("Running",false);
 				}
@@ -110,6 +111,7 @@ namespace Melancia.Gergelim {
 					rb.AddForce(Vector2.up*jump,ForceMode2D.Impulse);
 					jumpTimeout = .5f;
 					grounded = false;
+					sprite.SetBool("Running",false);
 					sprite.SetTrigger("Jump");
 				}
 				if (grounded && Mathf.Approximately(0, jumpTimeout) && sprite.GetBool("Flying")) {
