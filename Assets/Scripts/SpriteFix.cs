@@ -9,7 +9,7 @@ namespace Melancia.Gergelim {
 		SpriteRenderer spriteRenderer;
 		EntityRenderer entityRenderer;
 		float z;
-
+		
 		void Awake() {
 			tr = transform;
 			spriteRenderer = GetComponent<SpriteRenderer>();
