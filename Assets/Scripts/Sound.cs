@@ -9,8 +9,7 @@ namespace Melancia.Gergelim {
 
 		public AudioMixerGroup master;
 		AudioMixerSnapshot lowpass0,lowpass1;
-
-		Transform tr;
+		
 		AudioSource[] aud;
 		const int poolSize = 16;
 		int audIndex;
@@ -19,7 +18,6 @@ namespace Melancia.Gergelim {
 
 		void Awake() {
 			me = this;
-			tr = transform;
 			aud = new AudioSource[poolSize];
 			for (int a = 0; a < poolSize; a++) {
 				var s = aud[a] = gameObject.AddComponent<AudioSource>();

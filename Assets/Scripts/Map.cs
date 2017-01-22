@@ -9,6 +9,17 @@ namespace Melancia.Gergelim {
 		//pi: meio dia
 		//2*pi: meia noite (volta pro 0)
 
+		public static bool day {
+			get {
+				return time >= Mathf.PI*.5f && time <= Mathf.PI*1.5f;
+			}
+		}
+		public static bool night {
+			get {
+				return !day;
+			}
+		}
+
 		float timeStart;
 
 		const float duration = 120;

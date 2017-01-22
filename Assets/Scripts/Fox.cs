@@ -11,6 +11,7 @@ namespace Melancia.Gergelim {
 		public Animator sprite { get; private set; }
 
 		public static Fox me { get; private set; }
+		public static bool helping = false;
 
 		Dictionary<Collider2D,Collision2D> cols;
 		bool grounded = false;
@@ -55,6 +56,7 @@ namespace Melancia.Gergelim {
 		}
 
 		void Update() {
+			helping = false;
 			if (teleport) {
 				teleportProgress += Time.deltaTime*teleportVel;
 				if (teleportProgress >= 1) {
@@ -118,12 +120,9 @@ namespace Melancia.Gergelim {
 					sprite.SetTrigger("Falling");
 					sprite.SetBool("Flying",false);
 				}
-
 				if (!grounded && !sprite.GetBool("Flying")) {
 					sprite.SetBool("Flying",true);
 				}
-
-
 				if (Input.GetButtonDown("action")) {
 					AreaInfo info;
 					if (Area.GetArea(tr.position,out info)) {
@@ -132,10 +131,11 @@ namespace Melancia.Gergelim {
 						} else {
 							SwitchDepth();
 						}
+					} else {
+						helping = true;
 					}
 				}
 			}
-			if (Input.GetButtonDown("alt")) tr.PlaySound(clip,1,1);
 		}
 		
 		void SwitchDepth() {
