@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r10">
+    <folder id="0">
+        <file id="0" name="rio.png" width="828" height="580" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="wave1.png" width="40" height="28" pivot_x="0.4" pivot_y="0.5"/>
+        <file id="2" name="wave2.png" width="39" height="64" pivot_x="0.358974" pivot_y="0.5625"/>
+        <file id="3" name="wave3.png" width="167" height="69" pivot_x="0.449102" pivot_y="0.57971"/>
+        <file id="4" name="wave4.png" width="66" height="78" pivot_x="0.515152" pivot_y="0.602564"/>
+        <file id="5" name="wave5.png" width="41" height="55" pivot_x="0.682927" pivot_y="0.527273"/>
+    </folder>
+    <entity id="0" name="Rio">
+        <animation id="0" name="idle" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="5" key="0" z_index="5"/>
+                </key>
+                <key id="1" time="500">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="1" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="1" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="1" z_index="4"/>
+                    <object_ref id="5" timeline="5" key="1" z_index="5"/>
+                </key>
+                <key id="2" time="1000">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="2" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="2" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="2" z_index="4"/>
+                    <object_ref id="5" timeline="5" key="2" z_index="5"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="rio">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-414" y="286"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="0" x="-414" y="286"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="wave5">
+                <key id="0" spin="0">
+                    <object folder="0" file="5" x="71" y="126" a="0"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="5" x="69" y="126" scale_x="1.166667" scale_y="1.144067" a="0.56552"/>
+                </key>
+                <key id="2" time="1000" spin="0">
+                    <object folder="0" file="5" x="67" y="126" scale_x="1.333334" scale_y="1.288135" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="wave3">
+                <key id="0" spin="0">
+                    <object folder="0" file="3" x="134" y="-134" a="0"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="3" x="132.5" y="-136.5" scale_x="1.1" scale_y="1.314815" a="0.63448"/>
+                </key>
+                <key id="2" time="1000" spin="0">
+                    <object folder="0" file="3" x="131" y="-139" scale_x="1.2" scale_y="1.62963" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="wave4">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="138" y="-5" angle="8.426969" scale_y="1" a="0"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="4" x="137" y="-7" angle="8.426969" scale_x="1.089577" scale_y="1.081181" a="0.63448"/>
+                </key>
+                <key id="2" time="1000" spin="0">
+                    <object folder="0" file="4" x="136" y="-9" angle="8.426969" scale_x="1.179154" scale_y="1.162362" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="wave2">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="10" y="-105" a="0"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="2" x="12.5" y="-104.5" scale_x="1.284314" scale_y="1.166667" a="0.54483"/>
+                </key>
+                <key id="2" time="1000" spin="0">
+                    <object folder="0" file="2" x="15" y="-104" scale_x="1.568627" scale_y="1.333333" a="0"/>
+                </key>
+            </timeline>
+            <timeline id="5" name="wave1">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-40" y="74" a="0"/>
+                </key>
+                <key id="1" time="500" spin="0">
+                    <object folder="0" file="1" x="-37" y="73" scale_x="1.336735" scale_y="1.258621" a="0.63448"/>
+                </key>
+                <key id="2" time="1000" spin="0">
+                    <object folder="0" file="1" x="-34" y="72" scale_x="1.673469" scale_y="1.517241" a="0"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
