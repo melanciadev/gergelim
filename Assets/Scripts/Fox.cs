@@ -13,6 +13,8 @@ namespace Melancia.Gergelim {
 		public static Fox me { get; private set; }
 		public static bool helping = false;
 
+		GameObject currentOtherAnimal;
+
 		Dictionary<Collider2D,Collision2D> cols;
 		bool grounded = false;
 
@@ -133,11 +135,22 @@ namespace Melancia.Gergelim {
 						}
 					} else {
 						helping = true;
+						AnimationHelpOthers ();
 					}
 				}
 			}
 		}
-		
+
+		void AnimationHelpOthers(){
+			sprite.SetTrigger ("Help"); // Call HelpOthers on animation end
+		}
+		public void HelpOthers(){
+			if (currentOtherAnimal.tag == "NightEffect" && Map.day)
+				return;
+				
+			currentOtherAnimal.GetComponent<Animator> ().SetBool ("Helped",true);
+		}
+
 		void SwitchDepth() {
 			zTransitioning = true;
 			zBack = !zBack;
@@ -180,6 +193,11 @@ namespace Melancia.Gergelim {
 				}
 			}
 		}
+
+		void OnTriggerEnter2D(Collider2D other){
+			currentOtherAnimal = other.gameObject;
+		}
+			
 
 		void OnCollisionEnter2D(Collision2D col) {
 			cols[col.collider] = col;
